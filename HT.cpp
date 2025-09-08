@@ -31,6 +31,7 @@ void printTrack(int tortoisePosition, int harePosition, int trackLength) {
         if (i == tortoisePosition && i == harePosition) {
             cout << "OUCH! ";
             cout<< "The Tortoise and the Hare have collided!" << endl;
+            i += 4; 
         }
         else if (i == tortoisePosition)
             cout << "T";
