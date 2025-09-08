@@ -64,10 +64,10 @@ if(toroisePosition >= trackLength && harePosition >= trackLength) {
     cout << "Hare wins!" << endl;
     return 0;
 }
-cout <<"who will win here?\n";
+
 //make a loop that will run until one of them reaches 70
 
-cout << "Random number (1-10): " << randomNum << endl;
+
 // function to control tort position
 //use rand() set parameters 
 //if else statements to control the flow of if the position + or - track length
