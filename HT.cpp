@@ -28,17 +28,19 @@ void moveHare(int &position) {
 }
 void printTrack(int tortoisePosition, int harePosition, int trackLength) {
     for (int i = 1; i <= trackLength; ++i) {
-        if (i == tortoisePosition && i == harePosition)
-            cout << "B"; // Both
+        if (i == tortoisePosition && i == harePosition) {
+            cout << "OUCH!";
+        }
         else if (i == tortoisePosition)
-            cout << "T"; // Tortoise
+            cout << "T";
         else if (i == harePosition)
-            cout << "H"; // Hare
+            cout << "H";
         else
-            cout << " "; // Empty space
+            cout << " ";
     }
     cout << endl;
 }
+
 
 int main(){
 
