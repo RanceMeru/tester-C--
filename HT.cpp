@@ -3,6 +3,43 @@
 #include <ctime>
 using namespace std;
 
+
+void moveTortoise(int &position) {
+    int i = rand() % 10 + 1;
+    if (i <= 5) position += 3;           // Fast plod
+    else if (i <= 7) position -= 6;      // Slip
+    else position += 1;                  // Slow plod
+    if (position < 1) position = 1;
+}
+
+void moveHare(int &position) {
+    int i = rand() % 10 + 1;
+    // Sleep
+    if (i <= 2) position += 0;   
+    // Big hop        
+    else if (i <= 4) position += 9;  
+     // Big slip    
+    else if (i == 5) position -= 12;  
+    // Small hop  
+    else if (i <= 8) position += 1;      
+    else position -= 2;        
+    // Small slip          
+    if (position < 1) position = 1;
+}
+void printTrack(int tortoisePosition, int harePosition, int trackLength) {
+    for (int i = 1; i <= trackLength; ++i) {
+        if (i == tortoisePosition && i == harePosition)
+            cout << "B"; // Both
+        else if (i == tortoisePosition)
+            cout << "T"; // Tortoise
+        else if (i == harePosition)
+            cout << "H"; // Hare
+        else
+            cout << " "; // Empty space
+    }
+    cout << endl;
+}
+
 int main(){
 
  srand(time(0)); // Seed the random number generator
