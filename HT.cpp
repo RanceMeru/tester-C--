@@ -47,11 +47,26 @@ int main(){
 int toroisePosition = 1;
 int harePosition = 1;
 const int trackLength = 70;
+int randomNum = rand() % 10 + 1; //random number between 1 and 10
+cout << "BANG !!!!!\nAND THEY'RE OFF !!!!!\n";
 
-
+while (toroisePosition < trackLength && harePosition < trackLength) {
+    moveTortoise(toroisePosition);
+    moveHare(harePosition);
+    printTrack(toroisePosition, harePosition, trackLength);
+    
+}
+if(toroisePosition >= trackLength && harePosition >= trackLength) {
+    cout << "It's a tie!" << endl;
+} else if (toroisePosition >= trackLength) {
+    cout << "Tortoise wins!" << endl;
+} else {
+    cout << "Hare wins!" << endl;
+    return 0;
+}
 cout <<"who will win here?\n";
 //make a loop that will run until one of them reaches 70
-int randomNum = rand() % 10 + 1; //random number between 1 and 10
+
 cout << "Random number (1-10): " << randomNum << endl;
 // function to control tort position
 //use rand() set parameters 
