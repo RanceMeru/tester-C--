@@ -29,7 +29,7 @@ void moveHare(int &position) {
 void printTrack(int tortoisePosition, int harePosition, int trackLength) {
     for (int i = 1; i <= trackLength; ++i) {
         if (i == tortoisePosition && i == harePosition) {
-            cout << "OUCH!";
+            cout << "OUCH! ";
             cout<< "The Tortoise and the Hare have collided!" << endl;
         }
         else if (i == tortoisePosition)
