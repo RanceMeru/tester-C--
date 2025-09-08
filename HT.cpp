@@ -65,14 +65,6 @@ if(toroisePosition >= trackLength && harePosition >= trackLength) {
     return 0;
 }
 
-//make a loop that will run until one of them reaches 70
 
-
-// function to control tort position
-//use rand() set parameters 
-//if else statements to control the flow of if the position + or - track length
-//if else if
-//stop until one of them reaches 70
-//print the winner
 return 0;
 }
